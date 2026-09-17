@@ -1,0 +1,27 @@
+name: Update README cards
+on:
+  schedule:
+    - cron: "0 0 * * *" # 매일 자정마다 알아서 업데이트합니다
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: 전체 활동 통계 카드 생성
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: 'username=${{ github.repository_owner }}&show_icons=true&theme=dark'
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 언어 비율 카드 생성
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: 'username=${{ github.repository_owner }}&layout=compact&theme=dark'
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
