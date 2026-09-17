@@ -32,3 +32,13 @@
 
 ## 📬 Contact
 - Email: mikoman80@gmail.com
+
+## 📊 GitHub Stats
+
+<div align="center">
+  <!-- 전체 활동 통계 카드 -->
+  <img src="https://github-readme-stats.vercel.app/api?username=mikoman80-miko&show_icons=true&theme=dark" width="48%" />
+  
+  <!-- 가장 많이 사용한 언어 비율 카드 -->
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mikoman80-miko&layout=compact&theme=dark" width="48%" />
+</div>
